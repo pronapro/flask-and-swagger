@@ -1,0 +1,44 @@
+
+  This is the Average Mark API
+  Call this api passing the three marks received.
+  ---
+  tags:
+    - Feedback API
+  parameters:
+    - name: mark1
+      in: query
+      type: integer
+      required: true
+      description: First mark
+    - name: mark2
+      in: query
+      type: integer
+      description: Second mark
+    - name: mark3
+      in: query
+      type: integer
+      description: Third mark
+
+  responses:
+    500:
+      description: Something went wrong. Try again
+    200:
+      description: Average Mark
+      schema:
+        id: post_endpoint
+        properties:
+          mark1:
+            type: integer
+            description: First Mark
+            default: 10
+          mark2:
+            type: integer
+            description: Second Mark
+            default: 10
+          Mark3:
+            type: integer
+            description: Third Mark
+            default: 10
+
+
+
